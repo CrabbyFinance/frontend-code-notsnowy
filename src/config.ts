@@ -16,11 +16,18 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
-      "SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
+
+      "NOSNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
       'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
-      'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
-      'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
-      "SNO-SNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
+      'NOSNO-USDC-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      'NOSNOSHARE-USDC-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
+      "NOSNO-NOSNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
+
+      //"SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
+      //'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
+      //'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      //'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
+      //"SNO-SNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
     },
     baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -39,11 +46,18 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
-      "SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
+
+      "NOSNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
       'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
-      'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
-      'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
-      "SNO-SNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
+      'NOSNO-USDC-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      'NOSNOSHARE-USDC-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
+      "NOSNO-NOSNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
+
+      //"SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
+      //'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
+      //'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      //'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
+      //"SNO-SNOSHARE-LP": ["0x3e262be2339069ceC95552683c1eb3F513aDCc66", 18]
     },
     baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -67,68 +81,68 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
- SnoJoeLPSnoShareRewardPool: {
-  name: 'Earn SNOSHARE by SNO-JOE LP',
+ NoSnoUsdcLPNoSnoShareRewardPool: {
+  name: 'Earn NOSNOSHARE by NOSNO-USDC LP',
   poolId: 0,
   sectionInUI: 2,
   contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNO-JOE-LP',
-  earnTokenName: 'SNOSHARE',
+  depositTokenName: 'NOSNO-USDC-LP',
+  earnTokenName: 'NOSNOSHARE',
   finished: false,
   sort: 6,
   closedForStaking: false
  },
- SnoShareJoeLPSnoShareRewardPool: {
-  name: 'Earn SNOSHARE by SNOSHARE-JOE LP',
+ NoSnoShareUsdcLPNoSnoShareRewardPool: {
+  name: 'Earn NOSNOSHARE by NOSNOSHARE-USDC LP',
   poolId: 1,
   sectionInUI: 2,
   contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNOSHARE-JOE-LP',
-  earnTokenName: 'SNOSHARE',
+  depositTokenName: 'NOSNOSHARE-USDC-LP',
+  earnTokenName: 'NOSNOSHARE',
   finished: false,
   sort: 7,
   closedForStaking: false
  },
- SnoSnoShareLPSnoShareRewardPool: {
-    name: 'Earn SNOSHARE by SNO-SNOSHARE LP',
+ NoSnoNoSnoShareLPNoSnoShareRewardPool: {
+    name: 'Earn NOSNOSHARE by NOSNO-NOSNOSHARE LP',
     poolId: 2,
     sectionInUI: 2,
     contract: 'TombAvaxLPHShareRewardPool',
-    depositTokenName: 'SNO-SNOSHARE-LP',
-    earnTokenName: 'SNOSHARE',
+    depositTokenName: 'NOSNO-NOSNOSHARE-LP',
+    earnTokenName: 'NOSNOSHARE',
     finished: false,
     sort: 8,
     closedForStaking: false
    },
-SnoSnoShareRewardPool: {
-    name: 'Earn SNOSHARE by SNO',
+NoSnoNoSnoShareRewardPool: {
+    name: 'Earn NOSNOSHARE by NOSNO',
     poolId: 5,
     sectionInUI: 2,
     contract: 'TombAvaxLPHShareRewardPool',
-    depositTokenName: 'SNO',
-    earnTokenName: 'SNOSHARE',
+    depositTokenName: 'NOSNO',
+    earnTokenName: 'NOSNOSHARE',
     finished: false,
     sort: 9,
     closedForStaking: false
 },
- SnoJoeLPRebate: {
-  name: 'Bond SNO-JOE LP for SNO',
+ NoSnoUsdcLPRebate: {
+  name: 'Bond NOSNO-USDC LP for NOSNO',
   poolId: 100,
   sectionInUI: 3,
   contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNO-JOE-LP',
-  earnTokenName: 'SNO',
+  depositTokenName: 'NOSNO-USDC-LP',
+  earnTokenName: 'NOSNO',
   finished: false,
   sort: 6,
   closedForStaking: false
  },
- SnoShareJoeLPRebate: {
-  name: 'Bond SNOSHARE-JOE LP for SNO',
+ NoSnoShareUsdcLPRebate: {
+  name: 'Bond NOSNOSHARE-USDC LP for NOSNO',
   poolId: 100,
   sectionInUI: 3,
   contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNOSHARE-JOE-LP',
-  earnTokenName: 'SNO',
+  depositTokenName: 'NOSNOSHARE-USDC-LP',
+  earnTokenName: 'NOSNO',
   finished: false,
   sort: 6,
   closedForStaking: false

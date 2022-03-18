@@ -29,7 +29,7 @@ import logohshare2 from '../../assets/img/snoshare.png';
 import useTombStats from '../../hooks/useTombStats';
 import usetShareStats from '../../hooks/usetShareStats';
 
-const logo = require('../../assets/img/logo-icywhale.png');
+const logo = require('../../assets/img/notsnowy_128.png');
 const useStyles = makeStyles((theme) => ({
   '@global': {
     ul: {
@@ -82,8 +82,9 @@ const useStyles = makeStyles((theme) => ({
   },
   brandLink: {
     textDecoration: 'none',
-    color: '#506acc',
-    fontWeight: 900,
+    fontWeight: 400,
+    color: 'black',
+    textShadow: '2px 2px 4px #ff000066',
     '&:hover': {
       textDecoration: 'none',
     },
@@ -142,7 +143,7 @@ const Nav = () => {
               <Link to="/" color="inherit" className={classes.brandLink}>
                 <div className={classes.label} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                   <img alt='logo' className={classes.logo} src={String(logo)} />
-                  Icy Whale
+                  Not Snowy
                   </div>
               </Link>
             </Typography>
@@ -162,21 +163,21 @@ const Nav = () => {
               <Link color="textPrimary" to="/rebates" className={classes.link}>
                 Rebates
               </Link>
-              <a href="https://yieldwolf.finance/avalanche/snowy-owl/" target="_blank" rel="noopener noreferrer" className={classes.link}>
+              {/*<a href="https://yieldwolf.finance/avalanche/snowy-owl/" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 Compound
-              </a>
+              </a>*/}
               <a href="https://snowyowlfinance.gitbook.io/" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 Docs
               </a>
-              <a href="https://arctic-fox.finance/" target="_blank" rel="noopener noreferrer" className={classes.link}>
+              {/*<a href="https://arctic-fox.finance/" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 ArcticFox
-              </a>
+              </a>*/}
             </Box>
             <div style={{ width: "auto", marginLeft: "auto", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginRight: "20px" }}>
-              <img style={{ width: 50 }} src={"/static/media/sno.5382de83.png"} />
-              <span style={{ fontSize: '16px', color:'#000000', marginRight: '15px', marginLeft: '10px' }}>${tombPriceInDollars ? tombPriceInDollars	 : '-.--'}</span>
-              <img style={{ width: 50 }} src={"/static/media/snoshare.20c07224.png"} />
-              <span style={{ fontSize: '16px', color:'#000000', marginRight: '30px', marginLeft: '10px' }}>${tSharePriceInDollars ? tSharePriceInDollars	 : '-.--'}</span>
+            {/*   <img style={{ width: 50 }} src={"/static/media/logo_notsnowy_native.png"} />
+                  <span style={{ fontSize: '16px', color:'#000000', marginRight: '15px', marginLeft: '10px' }}>${tombPriceInDollars ? tombPriceInDollars	 : '-.--'}</span>
+                  <img style={{ width: 50 }} src={"/static/media/logo_notsnowy_share.png"} />
+                  <span style={{ fontSize: '16px', color:'#000000', marginRight: '30px', marginLeft: '10px' }}>${tSharePriceInDollars ? tSharePriceInDollars	 : '-.--'}</span> */}
             <Button href="https://discord.gg/vYWDJjwfvE" target="_blank" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
             <img alt='discordlogo' style={{ width: 22 }} src={String(DiscordImage)} />
               </Button>
@@ -195,7 +196,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Icy Whale Finance
+              Not Snowy Finance
             </Typography>
 
             <Drawer

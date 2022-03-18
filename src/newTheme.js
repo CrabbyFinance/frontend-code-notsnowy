@@ -18,12 +18,12 @@ const newTheme = createMuiTheme({
       contrastText: '#000',
     },
     discord :{
-      light: '#6043f7',
-      main: '#6043f7',
+      light: '#db6666',
+      main: '#db6666',
     },
     secondary: {
-      light: '#6043f7',
-      main: '#6043f7',
+      light: '#db6666',
+      main: '#db6666',
       dark: '#757ce8',
       contrastText: '#000',
     },

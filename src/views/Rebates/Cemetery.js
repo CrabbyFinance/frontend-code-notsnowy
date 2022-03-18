@@ -18,7 +18,7 @@ import useCashPriceInEstimatedTWAP from '../../hooks/useCashPriceInEstimatedTWAP
 import useBanks from '../../hooks/useBanks';
 import useRebateTreasury from "../../hooks/useRebateTreasury"
 import useTombStats from '../../hooks/useTombStats';
-import CemeteryImage from '../../assets/img/background.jpg';
+import CemeteryImage from '../../assets/img/background-notsnowy.jpg';
 
 const web3 = new Web3()
 const BN = n => new web3.utils.BN(n)
@@ -109,10 +109,10 @@ const Cemetery = () => {
           {!!account ? (
             <>
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom style={{ marginBottom: '40px', color: "#000000" }}>
-                SNODAO
+                NOSNODAO
               </Typography>
-              <Alert variant="filled" severity="info" className={classes.alert}>
-                  SNO rewards from bonds are vested for 3 days linearly.
+              <Alert variant="" severity="error" className={classes.alert} style={{ color: "#ff1100" }} >
+                  NOSNO rewards from bonds are vested for 3 days linearly.
                 </Alert>
               <Box mt={2}>
                 <Grid container justify="center" spacing={3}>
@@ -120,9 +120,9 @@ const Cemetery = () => {
                     <Card className={`${classes.gridItem} ${classes.gridCard}`}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          SNO Price <small>(TWAP)</small>
+                          NOSNO Price <small>(TWAP)</small>
                         </Typography>
-                        <Typography variant="h6">{tombPriceInFTM ? tombPriceInFTM : '-.----'} JOE</Typography>
+                        <Typography variant="h6">{tombPriceInFTM ? tombPriceInFTM : '-.----'} USDC</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -158,7 +158,7 @@ const Cemetery = () => {
                     <Card style={{ height: "auto" }} className={classes.gridCard}>
                       <CardContent align="center">
                         <Typography variant="h5">
-                          SNO Vesting
+                          NOSNO Vesting
                         </Typography>
                         <Typography variant="h6">{vested.toFixed(4)} Total Vested</Typography>
                         <Typography variant="h6">{claimable3omb.toFixed(4)} Claimable</Typography>

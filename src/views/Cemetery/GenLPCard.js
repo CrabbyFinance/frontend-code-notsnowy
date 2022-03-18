@@ -7,8 +7,8 @@ import TokenSymbol from '../../components/TokenSymbol';
 import useLpStats from '../../hooks/useLpStats';
 
 const GenLPCard = () => {
-  const tombFtmLpStats = useLpStats('SNO-JOE-LP');
-  const tShareFtmLpStats = useLpStats('SNOSHARE-JOE-LP');
+  const tombFtmLpStats = useLpStats('NOSNO-USDC-LP');
+  const tShareFtmLpStats = useLpStats('NOSNOSHARE-USDC-LP');
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   return (
@@ -19,17 +19,17 @@ const GenLPCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              SNO-JOE-LP
+              NOSNO-USDC-LP
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="SNO-JOE-LP" />
+            <TokenSymbol symbol="NOSNO-USDC-LP" />
         </Box>
         <Box mt={2}>
         </Box>
         <Box mt={2}>
           <span style={{ fontSize: '26px' }}>
-            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} SNO /{' '}
-            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} JOE
+            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} NOSNO /{' '}
+            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} USDC
           </span>
         </Box>
         <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>

@@ -12,10 +12,10 @@ const GenesisCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              SNO-JOE HLP
+              NOSNO-USDC HLP
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="SNO-JOE-LP" />
+            <TokenSymbol symbol="NOSNO-USDC-LP" />
         </Box>
         <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -34,10 +34,10 @@ const GenesisCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              JOE
+              USDC
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="SNO-JOE-LP" />
+            <TokenSymbol symbol="NOSNO-USDC-LP" />
         </Box>
         <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -59,7 +59,7 @@ const GenesisCard = () => {
             wXDAI
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
+              <TokenSymbol symbol="NOSNOSHARE-USDC-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -81,7 +81,7 @@ const GenesisCard = () => {
             wETH
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
+              <TokenSymbol symbol="NOSNOSHARE-USDC-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>

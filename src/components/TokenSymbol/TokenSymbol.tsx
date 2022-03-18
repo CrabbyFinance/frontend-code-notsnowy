@@ -1,11 +1,11 @@
 import React from 'react';
 
 //Graveyard ecosystem logos
-import tombLogo from '../../assets/img/sno.png';
-import tShareLogo from '../../assets/img/snoshare.png';
+import tombLogo from '../../assets/img/logo_notsnowy_native.gif';
+import tShareLogo from '../../assets/img/logo_notsnowy_share.gif';
 import tombLogoPNG from '../../assets/img/sno.png';
 import tShareLogoPNG from '../../assets/img/snoshare.png';
-import tBondLogo from '../../assets/img/snobond.png';
+import tBondLogo from '../../assets/img/logo_notsnowy_bond.png';
 
 import tombFtmLpLogo from '../../assets/img/sno-joe.png';
 import tshareFtmLpLogo from '../../assets/img/snoshare-joe.png';
@@ -23,17 +23,25 @@ const logosBySymbol: { [title: string]: string } = {
   TOMBPNG: tombLogoPNG,
   TSHAREPNG: tShareLogoPNG,
   HSHARE: tShareLogo,
-  SNOBOND: tBondLogo,
+  NOSNOBOND: tBondLogo,
   HBOND: tBondLogo,
   WFTM: wftmLogo,
   BOO: booLogo,
   SHIBA: shibaLogo,
   ZOO: zooLogo,
-  SNO: tombLogo,
-  SNOSHARE: tShareLogoPNG,
-  'SNO-JOE-LP': tombFtmLpLogo,
-  'SNOSHARE-JOE-LP': tshareFtmLpLogo,
-  "SNO-SNOSHARE-LP": snoSnoShareLpLogo
+
+  NOSNO: tombLogo,
+  NOSNOSHARE: tShareLogoPNG,
+  'NOSNO-USDC-LP': tombFtmLpLogo,
+  'NOSNOSHARE-USDC-LP': tshareFtmLpLogo,
+  "NOSNO-NOSNOSHARE-LP": snoSnoShareLpLogo
+
+  //SNO: tombLogo,
+  //SNOSHARE: tShareLogoPNG,
+  //'SNO-JOE-LP': tombFtmLpLogo,
+  //'SNOSHARE-JOE-LP': tshareFtmLpLogo,
+  //"SNO-SNOSHARE-LP": snoSnoShareLpLogo,
+
 };
 
 type LogoProps = {

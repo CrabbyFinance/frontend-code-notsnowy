@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const CemeteryCard = () => {
-  const tombFtmLpStats = useLpStats('SNO-JOE-LP');
-  const tShareFtmLpStats = useLpStats('SNOSHARE-JOE-LP');
-  const snoSnoShareLpStats = useLpStats('SNO-SNOSHARE-LP')
+  const tombFtmLpStats = useLpStats('NOSNO-USDC-LP');
+  const tShareFtmLpStats = useLpStats('NOSNOSHARE-USDC-LP');
+  const snoSnoShareLpStats = useLpStats('NOSNO-NOSNOSHARE-LP')
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   const snoSnoShareLPStats = useMemo(() => (snoSnoShareLpStats ? snoSnoShareLpStats : null), [snoSnoShareLpStats])
@@ -39,17 +39,17 @@ const CemeteryCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              SNO-JOE-LP
+              NOSNO-USDC-LP
             </Typography>
         <Box mt={1}>
-            <TokenSymbol symbol="SNO-JOE-LP" />
+            <TokenSymbol symbol="NOSNO-USDC-LP" />
         </Box>
         <Box mt={2}>
         </Box>
         <Box mt={2}>
           <span style={{ fontSize: '23px' }}>
-            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} SNO /{' '}
-            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} JOE
+            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} NOSNO /{' '}
+            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} USDC
           </span>
         </Box>
         <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
@@ -72,17 +72,17 @@ const CemeteryCard = () => {
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
-            SNOSHARE-JOE-LP
+            NOSNOSHARE-USDC-LP
               </Typography>
           <Box mt={1}>
-              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
+              <TokenSymbol symbol="NOSNOSHARE-USDC-LP" />
           </Box>
           <Box mt={2}>
           </Box>
           <Box mt={2}>
           <span style={{ fontSize: '23px' }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} SNOSHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} JOE
+                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} NOSNOSHARE /{' '}
+                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} USDC
                 </span>
           </Box>
           <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
@@ -106,17 +106,17 @@ const CemeteryCard = () => {
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
-            SNO-SNOSHARE-LP
+            NOSNO-NOSNOSHARE-LP
               </Typography>
           <Box mt={1}>
-              <TokenSymbol symbol="SNO-SNOSHARE-LP" />
+              <TokenSymbol symbol="NOSNO-NOSNOSHARE-LP" />
           </Box>
           <Box mt={2}>
           </Box>
           <Box mt={2}>
           <span style={{ fontSize: '23px' }}>
-                  {snoSnoShareLPStats?.ftmAmount ? snoSnoShareLPStats?.ftmAmount : '-.--'} SNO /{' '}
-                  {snoSnoShareLPStats?.tokenAmount ? snoSnoShareLPStats?.tokenAmount : '-.--'} SNOSHARE
+                  {snoSnoShareLPStats?.ftmAmount ? snoSnoShareLPStats?.ftmAmount : '-.--'} NOSNO /{' '}
+                  {snoSnoShareLPStats?.tokenAmount ? snoSnoShareLPStats?.tokenAmount : '-.--'} NOSNOSHARE
                 </span>
           </Box>
           <Box>${snoSnoShareLPStats?.priceOfOne ? snoSnoShareLPStats.priceOfOne : '-.--'}</Box>
@@ -140,10 +140,10 @@ const CemeteryCard = () => {
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
-            SNO
+            NOSNO
               </Typography>
           <Box mt={1}>
-              <TokenSymbol symbol="SNO" />
+              <TokenSymbol symbol="NOSNO" />
           </Box>
           <Box mt={2}>
               SINGLE STAKE
@@ -160,7 +160,7 @@ const CemeteryCard = () => {
               Farm
             </Button>
             <Button color="primary" target="_blank" style={{ width: '150px', height: "45px", marginBottom: '5%' }} variant="contained" href="https://traderjoexyz.com/trade?inputCurrency=0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd&outputCurrency=0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D" >
-              Buy SNO
+              Buy NOSNO
             </Button>
           </CardActions>
       </Card>

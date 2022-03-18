@@ -51,7 +51,7 @@ const Footer = () => {
           <Grid item xs={12}>
             <Typography variant="body2" style={{ color: "#000000"}} align="center">
               <Link color="inherit" href="/">
-                Icy Whale Finance
+                Not Snowy Finance
               </Link>{' '}
               {new Date().getFullYear()}
             </Typography>

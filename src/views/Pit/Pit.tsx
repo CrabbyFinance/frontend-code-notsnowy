@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
 import Page from '../../components/Page';
-import PitImage from '../../assets/img/background.jpg';
+import PitImage from '../../assets/img/background-notsnowy.jpg';
 import { createGlobalStyle } from 'styled-components';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useWallet } from 'use-wallet';
@@ -41,7 +41,7 @@ const Pit: React.FC = () => {
     async (amount: string) => {
       const tx = await tombFinance.buyBonds(amount);
       addTransaction(tx, {
-        summary: `Buy ${Number(amount).toFixed(2)} SNOBOND with ${amount} SNO`,
+        summary: `Buy ${Number(amount).toFixed(2)} NOSNOBOND with ${amount} NOSNO`,
       });
     },
     [tombFinance, addTransaction],
@@ -50,7 +50,7 @@ const Pit: React.FC = () => {
   const handleRedeemBonds = useCallback(
     async (amount: string) => {
       const tx = await tombFinance.redeemBonds(amount);
-      addTransaction(tx, { summary: `Redeem ${amount} SNOBOND` });
+      addTransaction(tx, { summary: `Redeem ${amount} NOSNOBOND` });
     },
     [tombFinance, addTransaction],
   );
@@ -71,13 +71,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Purchase"
                   fromToken={tombFinance.TOMB}
-                  fromTokenName="SNO"
+                  fromTokenName="NOSNO"
                   toToken={tombFinance.TBOND}
-                  toTokenName="SNOBOND"
+                  toTokenName="NOSNOBOND"
                   priceDesc={
                     !isBondPurchasable
-                      ? 'SNO is over peg'
-                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' SNOBONDs available for purchase'
+                      ? 'NOSNO is over peg'
+                      : getDisplayBalance(bondsPurchasable, 18, 4) + ' NOSNOBONDs available for purchase'
                   }
                   onExchange={handleBuyBonds}
                   disabled={!bondStat || isBondRedeemable}
@@ -85,14 +85,14 @@ const Pit: React.FC = () => {
               </StyledCardWrapper>
               <StyledStatsWrapper>
                 <ExchangeStat
-                  tokenName="SNO"
+                  tokenName="NOSNO"
                   description="Last-Hour TWAP Price"
                   price={getDisplayBalance(cashPrice, 18, 4)}
                 />
                 <Spacer size="md" />
                 <ExchangeStat
-                  tokenName="SNOBOND"
-                  description="Current Price: (SNO)^2"
+                  tokenName="NOSNOBOND"
+                  description="Current Price: (NOSNO)^2"
                   price={Number(bondStat?.tokenInFtm).toFixed(2) || '-'}
                 />
               </StyledStatsWrapper>
@@ -100,13 +100,13 @@ const Pit: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={tombFinance.TBOND}
-                  fromTokenName="SNOBOND"
+                  fromTokenName="NOSNOBOND"
                   toToken={tombFinance.TOMB}
-                  toTokenName="SNO"
-                  priceDesc={`${getDisplayBalance(bondBalance)} SNOBONDs Available in wallet`}
+                  toTokenName="NOSNO"
+                  priceDesc={`${getDisplayBalance(bondBalance)} NOSNOBONDs Available in wallet`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || !isBondRedeemable}
-                  disabledDescription={!isBondRedeemable ? `Enabled when SNO > ${BOND_REDEEM_PRICE} JOE` : null}
+                  disabledDescription={!isBondRedeemable ? `Enabled when NOSNO > ${BOND_REDEEM_PRICE} USDC` : null}
                 />
               </StyledCardWrapper>
             </StyledBond>

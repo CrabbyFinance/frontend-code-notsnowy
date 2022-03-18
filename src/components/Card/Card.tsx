@@ -6,7 +6,7 @@ const Card: React.FC = ({ children }) => <StyledCard>{children}</StyledCard>;
 
 const StyledCard = styled.div`
   background: rgb(106,106,106);
-  background: linear-gradient(90deg, #3a6b7e 14%, rgba(177,177,177,1) 100%);
+  background: linear-gradient(90deg, #3a6b7e59 14%, rgba(177,177,177,1) 100%);
   background-position: bottom right;
   border-radius: 15px;
   color: #FFFFFF;

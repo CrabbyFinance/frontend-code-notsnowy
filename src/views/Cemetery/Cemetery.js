@@ -11,7 +11,7 @@ import Page from '../../components/Page';
 import CemeteryCard from './CemeteryCard';
 import GenesisCard from './GenesisCard';
 import GenLPCard from './GenLPCard';
-import CemeteryImage from '../../assets/img/background.jpg';
+import CemeteryImage from '../../assets/img/background-notsnowy.jpg';
 import { createGlobalStyle } from 'styled-components';
 
 import useBanks from '../../hooks/useBanks';
@@ -50,7 +50,7 @@ const Cemetery = () => {
                 </div> */}
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   <Typography color="primary.dark" align='center' variant="h4" gutterBottom style={{ marginTop: "-25px", marginBottom: "35px" }}>
-                    SNOSHARE Pools
+                    NOSNOSHARE Pools
                   </Typography>
                   <Grid container spacing={3}>
                     <CemeteryCard />

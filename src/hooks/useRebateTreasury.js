@@ -9,8 +9,8 @@ const RebateTreasury = new web3.eth.Contract(RebateTreasuryABI, "0x4CAeefa4d5Eea
 const Threeomb = new web3.eth.Contract(ERC20ABI, "0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D")
 
 const assetList = [
-    "0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F", // SNO-JOE
-    "0x061349a57b702ebE3139CA419457bb23f7e0D8A2", // SNOSHARE-JOE
+    "0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F", // NOSNO-USDC
+    "0x061349a57b702ebE3139CA419457bb23f7e0D8A2", // NOSNOSHARE-USDC
 ]
 
 function useRebateTreasury() {

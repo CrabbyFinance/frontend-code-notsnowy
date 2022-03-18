@@ -46,13 +46,13 @@ export class TombFinance {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'SNO');
-    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'SNOSHARE');
-    this.TBOND = new ERC20(deployments.tBond.address, provider, 'SNOBOND');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'NOSNO');
+    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'NOSNOSHARE');
+    this.TBOND = new ERC20(deployments.tBond.address, provider, 'NOSNOBOND');
     this.FTM = this.externalTokens['WFTM'];
 
     // Uniswap V2 Pair
-    this.TOMBWFTM_LP = new Contract(externalTokens['SNO-JOE-LP'][0], IUniswapV2PairABI, provider);
+    this.TOMBWFTM_LP = new Contract(externalTokens['NOSNO-USDC-LP'][0], IUniswapV2PairABI, provider);
 
     this.config = cfg;
     this.provider = provider;
@@ -124,8 +124,8 @@ export class TombFinance {
     let lpToken = this.externalTokens[name];
     let lpTokenSupplyBN = await lpToken.totalSupply();
     let lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    let token0 = name === "SNO-JOE-LP" ? this.TOMB : this.TSHARE;
-    let isTomb = name === "SNO-JOE-LP";
+    let token0 = name === "NOSNO-USDC-LP" ? this.TOMB : this.TSHARE;
+    let isTomb = name === "NOSNO-USDC-LP";
     let tokenAmountBN = await token0.balanceOf(lpToken.address);
     let tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
@@ -319,16 +319,16 @@ export class TombFinance {
   async getDepositTokenPriceInDollars(tokenName: string, token: ERC20) {
     let tokenPrice;
     const priceOfOneFtmInDollars = await this.getWFTMPriceFromPancakeswap();
-    if (tokenName === 'JOE') {
+    if (tokenName === 'USDC') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
-      if (tokenName === "SNO") {
+      if (tokenName === "NOSNO") {
         tokenPrice = (await this.getTombStat()).priceInDollars;
-      } else if (tokenName === 'SNO-JOE-LP') {
+      } else if (tokenName === 'NOSNO-USDC-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
-      } else if (tokenName === 'SNOSHARE-JOE-LP') {
+      } else if (tokenName === 'NOSNOSHARE-USDC-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
-      } else if (tokenName === "SNO-SNOSHARE-LP") {
+      } else if (tokenName === "NOSNO-NOSNOSHARE-LP") {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false)
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
