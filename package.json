@@ -2,7 +2,7 @@
   "name": "notsnowy.finance",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ydrojjjj.github.io",
+  "homepage": "https://ydrojjjj.github.io/frontend-code-notsnowy/",
   "dependencies": {
     "@ethersproject/providers": "^5.4.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
