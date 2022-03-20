@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Label from '../../components/Label';
 import { getDisplayBalance } from '../../utils/formatBalance';
 import useTokenBalance from '../../hooks/useTokenBalance';
+import HomeVideo from '../../assets/img/rain.mp4';
 import HomeImage from '../../assets/img/background-notsnowy.jpg';
 // import CashImage from '../../assets/img/logo_tomb4.png';
 import AvaxLogo from '../../assets/img/joe.png';
@@ -185,7 +186,13 @@ const Home = () => {
   
   return (
     <Page>
-      <BackgroundImage />
+
+      {/*<BackgroundImage />*/}
+      <video autoPlay muted loop id="myVideo" style={{ zIndex: -420 }} >
+        <source src={HomeVideo} type="video/mp4"></source>
+      </video>
+
+
       <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
         {/* Logo */}

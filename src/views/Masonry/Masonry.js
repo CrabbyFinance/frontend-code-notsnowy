@@ -29,6 +29,7 @@ import useTotalStakedOnMasonry from '../../hooks/useTotalStakedOnMasonry';
 import ProgressCountdown from './components/ProgressCountdown';
 import MasonryImage from '../../assets/img/background-notsnowy.jpg';
 import { createGlobalStyle } from 'styled-components';
+import MasonryVideo from '../../assets/img/rain.mp4';
 
 const BackgroundImage = createGlobalStyle`
   body, html {
@@ -62,7 +63,12 @@ const Masonry = () => {
 
   return (
     <Page>
-      <BackgroundImage />
+      
+      {/*<BackgroundImage />*/}
+      <video autoPlay muted loop id="myVideo" style={{ zIndex: -420 }} >
+        <source src={MasonryVideo} type="video/mp4"></source>
+      </video>
+
       {!!account ? (
         <>
           <Typography color="primary.black" align="center" variant="h3" gutterBottom>

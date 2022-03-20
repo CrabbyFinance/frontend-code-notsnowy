@@ -106,6 +106,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   padding-right: ${(props) => props.padding}px;
   pointer-events: ${(props) => (!props.disabled ? undefined : 'none')};
   width: 100%;
+  box-shadow: 6px 6px 6px #0E1D2F70;
   &:hover {
     background-color: ${(props) => props.color};
     color: ${(props) => props.theme.color.grey[900]};

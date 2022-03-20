@@ -178,7 +178,7 @@ const Nav = () => {
                   <span style={{ fontSize: '16px', color:'#000000', marginRight: '15px', marginLeft: '10px' }}>${tombPriceInDollars ? tombPriceInDollars	 : '-.--'}</span>
                   <img style={{ width: 50 }} src={"/static/media/logo_notsnowy_share.png"} />
                   <span style={{ fontSize: '16px', color:'#000000', marginRight: '30px', marginLeft: '10px' }}>${tSharePriceInDollars ? tSharePriceInDollars	 : '-.--'}</span> */}
-            <Button href="https://discord.gg/vYWDJjwfvE" target="_blank" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
+            <Button href="https://discord.gg/5TbedQwN6j" target="_blank" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
             <img alt='discordlogo' style={{ width: 22 }} src={String(DiscordImage)} />
               </Button>
             <AccountButton text="Connect"/>

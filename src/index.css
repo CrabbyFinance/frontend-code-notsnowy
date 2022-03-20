@@ -120,3 +120,13 @@ code {
   background-color: black !important;
   color: #757ce8 !important;
 }
+
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

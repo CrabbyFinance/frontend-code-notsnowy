@@ -19,6 +19,8 @@ import useBanks from '../../hooks/useBanks';
 import useRebateTreasury from "../../hooks/useRebateTreasury"
 import useTombStats from '../../hooks/useTombStats';
 import CemeteryImage from '../../assets/img/background-notsnowy.jpg';
+import CemeteryVideo from '../../assets/img/rain.mp4';
+
 
 const web3 = new Web3()
 const BN = n => new web3.utils.BN(n)
@@ -105,7 +107,12 @@ const Cemetery = () => {
     <Switch>
       <Page>
         <Route exact path={path}>
-          <BackgroundImage />
+          
+          {/*<BackgroundImage />*/}
+          <video autoPlay muted loop id="myVideo" style={{ zIndex: -420 }} >
+            <source src={CemeteryVideo} type="video/mp4"></source>
+          </video>
+          
           {!!account ? (
             <>
               <Typography color="textPrimary" align="center" variant="h3" gutterBottom style={{ marginBottom: '40px', color: "#000000" }}>

@@ -13,6 +13,7 @@ import GenesisCard from './GenesisCard';
 import GenLPCard from './GenLPCard';
 import CemeteryImage from '../../assets/img/background-notsnowy.jpg';
 import { createGlobalStyle } from 'styled-components';
+import CemeteryVideo from '../../assets/img/rain.mp4';
 
 import useBanks from '../../hooks/useBanks';
 
@@ -32,7 +33,12 @@ const Cemetery = () => {
     <Switch>
       <Page>
         <Route exact path={path}>
-          <BackgroundImage />
+          
+          {/*<BackgroundImage />*/}
+          <video autoPlay muted loop id="myVideo" style={{ zIndex: -420 }} >
+            <source src={CemeteryVideo} type="video/mp4"></source>
+          </video>
+          
           {!!account ? (
             <Container maxWidth="lg">
               <Typography color="primary.dark" align="center" variant="h2" style={{ marginTop: "-30px" }}>
