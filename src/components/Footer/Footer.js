@@ -58,7 +58,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} style={{ textAlign: 'center', marginTop: '10px' }}>
             <a
-              href="https://twitter.com/snowyowlfinance"
+              href="https://twitter.com/notsnowyowl"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
