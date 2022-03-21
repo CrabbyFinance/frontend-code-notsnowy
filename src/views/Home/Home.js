@@ -188,7 +188,7 @@ const Home = () => {
     <Page>
 
       {/*<BackgroundImage />*/}
-      <video autoPlay muted loop id="myVideo" style={{ zIndex: -420 }} >
+      <video autoPlay muted loop preload={'auto'} id="myVideo" style={{ zIndex: -420 }} >
         <source src={HomeVideo} type="video/mp4"></source>
       </video>
 
